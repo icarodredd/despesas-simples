@@ -1,75 +1,58 @@
-# React + TypeScript + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🧾 Despesas Simples
 
-Currently, two official plugins are available:
+> Controle de despesas pessoais usando TDD, Mobile-First, React e LocalStorage
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[![license: MIT](https://img.shields.io/github/license/icarodredd/despesas-simples)](https://github.com/icarodredd/despesas-simples/blob/main/LICENSE)
+[![issues](https://img.shields.io/github/issues/icarodredd/despesas-simples)](https://github.com/icarodredd/despesas-simples/issues)
+[![tests](https://img.shields.io/badge/tests-vitest-blue)](https://github.com/icarodredd/despesas-simples)
+[![react](https://img.shields.io/badge/React-v18.2.0-blue)](https://react.dev/)
+[![typescript](https://img.shields.io/badge/TypeScript-v5.0-blue)](https://www.typescriptlang.org/)
 
-## React Compiler
+</div>
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## 📌 Sobre
 
-## Expanding the ESLint configuration
+“Despesas Simples” é um projeto para acompanhar e gerenciar despesas pessoais de forma leve e organizada.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+O projeto aplica práticas modernas de desenvolvimento frontend, incluindo testes automatizados, design mobile-first, componentização com React e persistência local dos dados.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📋 Funcionalidades
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- ⚡ Adicionar / editar / excluir despesas
+- 📅 Filtrar por data
+- 📊 Resumo por categoria
+- 💾 Persistência local com LocalStorage
+- 🧪 Cobertura de testes automatizados
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📦 Tecnologias
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Camada       | Tecnologias               |
+| ------------ | ------------------------- |
+| UI           | React, CSS (mobile-first) |
+| Testes       | Vitest, Testing Library   |
+| Persistência | LocalStorage              |
+| Qualidade    | ESLint, Prettier          |
+| Tipagem      | TypeScript                |
+
+---
+
+## 🚀 Começando
+
+### 🔧 Pré-requisitos
+
+- Node.js 18+
+- npm ou yarn
+
+```bash
+git clone https://github.com/icarodredd/despesas-simples.git
+cd despesas-simples
+npm install
 ```
