@@ -8,3 +8,12 @@ it("should display the heading", () => {
   const logo = screen.getByRole("heading", { name: "Despesas Simples" });
   expect(logo).toBeInTheDocument();
 });
+
+it("should display the mode toggle", () => {
+  render(<Header />);
+  const btns = screen.getAllByRole("button");
+
+  const toggleButton = btns.find((btn) => btn.id.includes("radix-_r_0_"));
+
+  expect(toggleButton).toBeInTheDocument();
+});
